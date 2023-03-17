@@ -1,0 +1,104 @@
+{
+	"tableName":"sys_role",
+	"remark":"系统角色表",
+	"columns":[{
+		"columnName":"id",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":true,
+		"remark":"唯一性标识"
+	},{
+		"columnName":"name",
+		"columnRange":30,
+		"columnType":"VARCHAR",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"角色名称"
+	},{
+		"columnName":"code",
+		"columnRange":100,
+		"columnType":"VARCHAR",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"角色标签"
+	},{
+		"columnName":"status",
+		"columnRange":3,
+		"columnType":"TINYINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":1,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"状态：1正常 2禁用"
+	},{
+		"columnName":"note",
+		"columnRange":255,
+		"columnType":"VARCHAR",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"备注"
+	},{
+		"columnName":"sort",
+		"columnRange":5,
+		"columnType":"SMALLINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":125,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"排序"
+	},{
+		"columnName":"create_user",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"添加人"
+	},{
+		"columnName":"create_time",
+		"columnRange":26,
+		"columnType":"DATETIME",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"添加时间"
+	},{
+		"columnName":"update_user",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"更新人"
+	},{
+		"columnName":"update_time",
+		"columnRange":26,
+		"columnType":"DATETIME",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"更新时间"
+	},{
+		"columnName":"mark",
+		"columnRange":3,
+		"columnType":"TINYINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":1,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"有效标识(1正常 0删除)"
+	}]
+}

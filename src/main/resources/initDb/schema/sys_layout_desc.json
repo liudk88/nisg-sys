@@ -1,0 +1,95 @@
+{
+	"tableName":"sys_layout_desc",
+	"remark":"布局描述管理",
+	"columns":[{
+		"columnName":"id",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":true,
+		"remark":"主键ID"
+	},{
+		"columnName":"loc_desc",
+		"columnRange":100,
+		"columnType":"VARCHAR",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"页面位置描述"
+	},{
+		"columnName":"loc_id",
+		"columnRange":5,
+		"columnType":"SMALLINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"位置编号"
+	},{
+		"columnName":"item_id",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"站点ID"
+	},{
+		"columnName":"sort",
+		"columnRange":5,
+		"columnType":"SMALLINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":125,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"排序"
+	},{
+		"columnName":"create_user",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"添加人"
+	},{
+		"columnName":"create_time",
+		"columnRange":26,
+		"columnType":"DATETIME",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"添加时间"
+	},{
+		"columnName":"update_user",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"更新人"
+	},{
+		"columnName":"update_time",
+		"columnRange":26,
+		"columnType":"DATETIME",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"更新时间"
+	},{
+		"columnName":"mark",
+		"columnRange":3,
+		"columnType":"TINYINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":1,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"有效标识(1正常 0删除)"
+	}]
+}

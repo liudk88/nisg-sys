@@ -1,0 +1,122 @@
+{
+	"tableName":"sys_ad_sort",
+	"remark":"广告位管理表",
+	"columns":[{
+		"columnName":"id",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":true,
+		"remark":"主键ID"
+	},{
+		"columnName":"name",
+		"columnRange":50,
+		"columnType":"VARCHAR",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"广告位名称"
+	},{
+		"columnName":"description",
+		"columnRange":255,
+		"columnType":"VARCHAR",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"广告位描述"
+	},{
+		"columnName":"item_id",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"站点ID"
+	},{
+		"columnName":"cate_id",
+		"columnRange":5,
+		"columnType":"SMALLINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"栏目ID"
+	},{
+		"columnName":"loc_id",
+		"columnRange":5,
+		"columnType":"SMALLINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"广告页面位置"
+	},{
+		"columnName":"platform",
+		"columnRange":3,
+		"columnType":"TINYINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":1,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"站点类型：1PC网站 2WAP手机站 3微信小程序 4APP移动端"
+	},{
+		"columnName":"sort",
+		"columnRange":5,
+		"columnType":"SMALLINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":125,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"广告位排序"
+	},{
+		"columnName":"create_user",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"添加人"
+	},{
+		"columnName":"create_time",
+		"columnRange":26,
+		"columnType":"DATETIME",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"添加时间"
+	},{
+		"columnName":"update_user",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"更新人"
+	},{
+		"columnName":"update_time",
+		"columnRange":26,
+		"columnType":"DATETIME",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"更新时间"
+	},{
+		"columnName":"mark",
+		"columnRange":3,
+		"columnType":"TINYINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":1,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"有效标识(1正常 0删除)"
+	}]
+}

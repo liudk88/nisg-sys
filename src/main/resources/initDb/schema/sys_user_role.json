@@ -1,0 +1,23 @@
+{
+	"tableName":"sys_user_role",
+	"remark":"人员角色表",
+	"columns":[{
+		"columnName":"USER_ID",
+		"columnRange":32,
+		"columnType":"VARCHAR",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"人员ID"
+	},{
+		"columnName":"ROLE_ID",
+		"columnRange":32,
+		"columnType":"VARCHAR",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"角色ID"
+	}]
+}

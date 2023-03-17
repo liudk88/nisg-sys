@@ -1,0 +1,113 @@
+{
+	"tableName":"sys_notice",
+	"remark":"通知公告表",
+	"columns":[{
+		"columnName":"id",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":true,
+		"remark":"通知ID"
+	},{
+		"columnName":"title",
+		"columnRange":150,
+		"columnType":"VARCHAR",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"通知标题"
+	},{
+		"columnName":"content",
+		"columnRange":65535,
+		"columnType":"TEXT",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"通知内容"
+	},{
+		"columnName":"source",
+		"columnRange":1,
+		"columnType":"BIT",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"来源：1内部通知 2外部新闻"
+	},{
+		"columnName":"is_top",
+		"columnRange":3,
+		"columnType":"TINYINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":2,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"是否置顶：1是 2否"
+	},{
+		"columnName":"browse",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"阅读量"
+	},{
+		"columnName":"status",
+		"columnRange":3,
+		"columnType":"TINYINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":2,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"状态：1已发布 2待发布"
+	},{
+		"columnName":"create_user",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"添加人"
+	},{
+		"columnName":"create_time",
+		"columnRange":26,
+		"columnType":"DATETIME",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"添加时间"
+	},{
+		"columnName":"update_user",
+		"columnRange":10,
+		"columnType":"INT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":0,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"更新人"
+	},{
+		"columnName":"update_time",
+		"columnRange":26,
+		"columnType":"DATETIME",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":true,
+		"pk":false,
+		"remark":"更新时间"
+	},{
+		"columnName":"mark",
+		"columnRange":3,
+		"columnType":"TINYINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":1,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"有效标识"
+	}]
+}

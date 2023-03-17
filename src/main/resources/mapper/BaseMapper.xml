@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="plat">
+    <cache/>
+
+    <!-- 加载系统缓存到缓存管理器当中
+        各系统信息为'SYSTEMS'
+        父字典全部绑定在 CODES 下面进行使用
+        权限信息绑定在 PERMISSION 下面
+        单位信息绑定在 在 ORGS 下面
+     -->
+    <select id="codeCache" resultType="com.hcxinan.sys.model.TCommonSubkeys" parameterType="string" useCache="false"
+            flushCache="true">
+        SELECT CODE,SUBCODE,CNAME,VALID,CASE WHEN SEQ IS NULL THEN 99999 ELSE SEQ END SS,CASE WHEN SEQ IS NULL THEN
+        99999 ELSE SEQ END SEQ,PARAMS1,PARAMS2,DES FROM (
+        SELECT CODE,SUBCODE,CNAME,VALID,SEQ,PARAMS1,PARAMS2,DES FROM SYS_DICT_DATA
+        UNION ALL
+        SELECT 'CODES',CODE,CNAME,VALID,SEQ,PNAME1,PNAME2,DES FROM SYS_DICT
+        UNION ALL
+        SELECT 'ORGS',id,name,1,sort,pid,LINK_MAN,AREA from sys_dept
+        UNION ALL
+        SELECT 'ROLEUSER',user_id,role_id,1,1,username,name,code FROM sys_user_role ur LEFT join sys_user u on
+        ur.user_id=u.id left join sys_role r on ur.role_id=r.id
+        UNION ALL
+        SELECT 'USERTREE',id,name,1,sort,pid,'dept',AREA from sys_dept
+        UNION ALL
+        select 'USERTREE', username,realname,1,1,u.dept_id,d.name deptname,u.id from sys_user u left join sys_dept d on
+        u.dept_id=d.id
+        UNION ALL
+        SELECT 'USERS',U.ID,U.realname,U.status,U.sort,U.dept_id,U.nickname,U.mobile FROM sys_user U
+        UNION ALL
+        SELECT 'USERS2',U.ID,U.username,U.status,U.sort,U.dept_id,U.nickname,U.mobile FROM sys_user U
+        UNION ALL
+        SELECT 'USERACCOUT',U.ID,U.username,U.status,U.sort,U.dept_id,U.nickname,U.mobile FROM sys_user U
+        ) VW WHERE VALID = 1
+        <if test="value != null">
+            AND CODE= #{value}
+        </if>
+        ORDER BY CODE ASC,SEQ
+    </select>
+</mapper>

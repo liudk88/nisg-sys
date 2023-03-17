@@ -1,0 +1,23 @@
+{
+	"tableName":"sys_role_menu",
+	"remark":"角色菜单关联表",
+	"columns":[{
+		"columnName":"ROLE_ID",
+		"columnRange":5,
+		"columnType":"SMALLINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"角色ID"
+	},{
+		"columnName":"MENU_ID",
+		"columnRange":5,
+		"columnType":"SMALLINT UNSIGNED",
+		"decimalDigits":0,
+		"defaultVal":null,
+		"nullAbled":false,
+		"pk":false,
+		"remark":"菜单ID"
+	}]
+}
